@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"testing"
 
+	. "github.com/RobertVillalba/tusd/pkg/handler"
 	"github.com/golang/mock/gomock"
-	. "github.com/tus/tusd/pkg/handler"
 
 	"github.com/stretchr/testify/assert"
 )

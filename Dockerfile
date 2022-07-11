@@ -21,7 +21,7 @@ ARG GIT_COMMIT
 
 RUN set -xe \
 	&& GOOS=linux GOARCH=amd64 go build \
-        -ldflags="-X github.com/tus/tusd/cmd/tusd/cli.VersionName=${GIT_VERSION} -X github.com/tus/tusd/cmd/tusd/cli.GitCommit=${GIT_COMMIT} -X 'github.com/tus/tusd/cmd/tusd/cli.BuildDate=$(date --utc)'" \
+        -ldflags="-X github.com/RobertVillalba/tusd/cmd/tusd/cli.VersionName=${GIT_VERSION} -X github.com/RobertVillalba/tusd/cmd/tusd/cli.GitCommit=${GIT_COMMIT} -X 'github.com/RobertVillalba/tusd/cmd/tusd/cli.BuildDate=$(date --utc)'" \
         -o /go/bin/tusd ./cmd/tusd/main.go
 
 # start a new stage that copies in the binary built in the previous stage
